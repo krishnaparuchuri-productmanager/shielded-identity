@@ -94,9 +94,7 @@ We believe trust should be **instant, invisible, and built into every digital in
 
 Interested in a demo, a pilot, or partnering with us?
 
-- 🌐 **Website:** [fraudshield.in](https://fraudshield.in)
-- 📧 **Email:** hello@fraudshield.in
-- 💼 **Enterprise sales:** sales@fraudshield.in
+- 📧 **Email:** krishna1parchuri@gmail.com
 
 ---
 
