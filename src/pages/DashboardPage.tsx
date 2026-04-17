@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Bell, Plus, TrendingUp, TrendingDown, X } from "lucide-react";
 import CaseCard from "@/components/CaseCard";
 import { fraudCases } from "@/lib/mockData";
+import { useAuth } from "@/lib/auth";
 
 const kpis = [
   { label: "Total Cases Today", value: "142", trend: "+12%", up: true },
