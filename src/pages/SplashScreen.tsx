@@ -1,24 +1,27 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useAuth } from "@/lib/auth";
 
 const SplashScreen = () => {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [progress, setProgress] = useState(0);
+  const target = user ? "/dashboard" : "/login";
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((p) => {
         if (p >= 100) {
           clearInterval(interval);
-          navigate("/scan");
+          navigate(target);
           return 100;
         }
         return p + 100 / 30;
       });
     }, 100);
     return () => clearInterval(interval);
-  }, [navigate]);
+  }, [navigate, target]);
 
   return (
     <div className="min-h-dvh bg-background flex flex-col items-center justify-center px-8 relative">
@@ -61,10 +64,10 @@ const SplashScreen = () => {
         </div>
 
         <button
-          onClick={() => navigate("/scan")}
+          onClick={() => navigate(target)}
           className="w-full max-w-[240px] bg-fraud-primary text-fraud-bg font-semibold py-3 rounded-xl text-sm hover:brightness-110 transition-all min-h-[44px]"
         >
-          Get Started
+          {user ? "Open Dashboard" : "Sign in"}
         </button>
 
         {/* Progress bar */}

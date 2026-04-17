@@ -1,10 +1,10 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { Search, FolderOpen, Shield, User } from "lucide-react";
+import { Shield, FolderOpen, Search, User } from "lucide-react";
 
 const tabs = [
-  { label: "Scan", icon: Search, path: "/scan" },
-  { label: "My Cases", icon: FolderOpen, path: "/dashboard" },
   { label: "KYC", icon: Shield, path: "/kyc" },
+  { label: "My Cases", icon: FolderOpen, path: "/dashboard" },
+  { label: "Scan", icon: Search, path: "/scan" },
   { label: "Profile", icon: User, path: "/profile" },
 ];
 
@@ -12,7 +12,8 @@ const BottomNav = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  if (location.pathname === "/") return null;
+  const hiddenOn = ["/", "/login"];
+  if (hiddenOn.includes(location.pathname)) return null;
 
   return (
     <nav

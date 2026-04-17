@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Bell, Plus, TrendingUp, TrendingDown, X } from "lucide-react";
 import CaseCard from "@/components/CaseCard";
 import { fraudCases } from "@/lib/mockData";
+import { useAuth } from "@/lib/auth";
 
 const kpis = [
   { label: "Total Cases Today", value: "142", trend: "+12%", up: true },
@@ -16,6 +17,7 @@ const filters = ["All", "P1 Critical", "P2 High", "Under Review", "Escalated", "
 
 const DashboardPage = () => {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [activeFilter, setActiveFilter] = useState("All");
   const [showSheet, setShowSheet] = useState(false);
 
@@ -39,7 +41,12 @@ const DashboardPage = () => {
       <div className="px-5 pt-6 pb-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-xl font-bold text-fraud-text">Dashboard</h1>
+          <div>
+            <h1 className="text-xl font-bold text-fraud-text">Dashboard</h1>
+            {user && (
+              <p className="text-[11px] text-fraud-muted mt-0.5">Welcome back, {user.name.split(" ")[0]}</p>
+            )}
+          </div>
           <div className="flex items-center gap-3">
             <button className="relative min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Notifications">
               <Bell className="w-5 h-5 text-fraud-muted" />
@@ -47,9 +54,13 @@ const DashboardPage = () => {
                 3
               </span>
             </button>
-            <div className="w-8 h-8 rounded-full bg-fraud-primary/20 flex items-center justify-center text-xs font-bold text-fraud-primary">
-              KP
-            </div>
+            <button
+              onClick={() => navigate("/profile")}
+              className="w-8 h-8 rounded-full bg-fraud-primary/20 flex items-center justify-center text-xs font-bold text-fraud-primary"
+              aria-label="Profile"
+            >
+              {user?.initials ?? "KP"}
+            </button>
           </div>
         </div>
 
