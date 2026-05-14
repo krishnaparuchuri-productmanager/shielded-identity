@@ -92,6 +92,33 @@ We believe trust should be **instant, invisible, and built into every digital in
 
 ## MVP : https://fraudshieldidentitymvp.lovable.app
 
+---
+
+## 🎬 Demo
+
+### 📹 Video Walkthrough (63 seconds)
+
+https://github.com/krishnaparuchuri-productmanager/fraudshieldidentity/raw/demo-assets-and-ai-review/screenshots/app-demo-annotated.mp4
+
+> Full annotated walkthrough: Splash → Login → Dashboard → Identity Scan → Risk Results → KYC → Profile
+
+---
+
+### 📸 App Screenshots
+
+| | | |
+|:---:|:---:|:---:|
+| **Splash Screen** | **Login** | **Dashboard** |
+| ![Splash](screenshots/01-home-splash.png) | ![Login](screenshots/02-login.png) | ![Dashboard](screenshots/04-dashboard.png) |
+| **Case Queue** | **Quick Actions** | **Identity Scan** |
+| ![Cases](screenshots/04b-dashboard-cases.png) | ![FAB](screenshots/05-dashboard-fab.png) | ![Scan](screenshots/06-scan.png) |
+| **Aadhaar Input** | **HIGH RISK Result** | **Fraud Signals** |
+| ![Aadhaar](screenshots/06b-scan-filled.png) | ![Result](screenshots/07-result-high.png) | ![Signals](screenshots/07b-result-signals.png) |
+| **CRITICAL RISK** | **KYC Workflow** | **Profile** |
+| ![Critical](screenshots/07d-result-critical.png) | ![KYC](screenshots/08-kyc.png) | ![Profile](screenshots/09-profile.png) |
+
+---
+
 ## 📬 Get In Touch
 
 Interested in a demo, a pilot, or partnering with us?
