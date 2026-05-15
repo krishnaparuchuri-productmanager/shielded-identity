@@ -92,56 +92,49 @@ We believe trust should be **instant, invisible, and built into every digital in
 
 ## 🛠️ Tech Stack
 
-### Frontend
+**Frontend**
 
-| Technology | Purpose |
-|------------|---------|
-| **React 18** | UI library for building the component-based interface |
-| **TypeScript** | Type-safe JavaScript for robust, maintainable code |
-| **Vite 5** | Fast development server and production build tool |
-| **React Router DOM v6** | Client-side routing between screens (login, scan, dashboard, etc.) |
-| **Framer Motion** | Smooth page transitions and UI animations |
-| **TanStack Query (React Query) v5** | Server-state caching and async data management |
+**React 18** — Component-based UI library
 
-### UI & Styling
+**TypeScript** — Type-safe JavaScript for robust, maintainable code
 
-| Technology | Purpose |
-|------------|---------|
-| **Tailwind CSS v3** | Utility-first CSS framework for rapid, consistent styling |
-| **shadcn/ui** | Accessible, composable UI primitives (buttons, dialogs, forms, etc.) |
-| **Radix UI** | Headless, accessible component primitives (dropdowns, modals, tabs, etc.) |
-| **Lucide React** | Consistent, lightweight icon set |
-| **Tailwind CSS Animate** | Prebuilt animation utilities |
+**Vite 5** — Fast development server and production build tool
 
-### Data, Forms & Validation
+**React Router DOM v6** — Client-side routing between screens
 
-| Technology | Purpose |
-|------------|---------|
-| **Zod** | Runtime schema validation for forms and data shapes |
-| **React Hook Form** | Performant, flexible form handling with validation |
-| **Recharts** | Data visualizations for the analyst dashboard |
-| **Embla Carousel** | Touch-friendly carousels for document previews |
-| **Date-fns** | Lightweight date formatting and manipulation |
+**Framer Motion** — Smooth page transitions and UI animations
 
-### Backend & Infrastructure
+**TanStack Query v5** — Server-state caching and async data management
 
-| Technology | Purpose |
-|------------|---------|
-| **Lovable** | Low-code development and deployment platform |
-| **Mock authentication** | Session-based demo login (no external auth provider in MVP) |
-| **Session storage** | Lightweight client-side session persistence for demo users |
+**UI & Styling**
 
-> **Note:** This MVP uses mocked data and client-side session storage. Production deployments typically integrate with a backend service (e.g., Supabase / Lovable Cloud) for persistent data, real authentication, and audit logging.
+**Tailwind CSS v3** — Utility-first CSS framework for consistent styling
 
-### Testing & Tooling
+**shadcn/ui** — Accessible, composable UI component library
 
-| Technology | Purpose |
-|------------|---------|
-| **Vitest** | Fast unit testing framework |
-| **ESLint + TypeScript ESLint** | Static code analysis and type-aware linting |
-| **PostCSS + Autoprefixer** | CSS processing and vendor prefix automation |
+**Radix UI** — Headless accessible primitives — dropdowns, modals, tabs
 
----
+**Lucide React** — Consistent, lightweight icon set
+
+**Data, Forms & Validation**
+
+**Zod** - Runtime schema validation for forms and API responses
+
+**React Hook Form** — Performant form handling with validation
+
+**Recharts** — Data visualizations for the analyst dashboard
+
+**Date-fns** — Lightweight date formatting and manipulation
+
+**Tooling**
+
+**Vitest** — Fast unit testing framework
+
+**ESLint + TypeScript ESLint** — Static analysis and type-aware linting
+
+**PostCSS + Autoprefixer** — CSS processing and vendor prefix automation
+
+--
 
 ## 🚀 Getting Started
 
